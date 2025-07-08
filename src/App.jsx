@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+const todo = [
+  'Présenter React',
+  'Présenter JSX',
+  'Créer des composants'
+]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <Title color="red">Mon composant</Title>
+
+      <input type="text" />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+        perspiciatis at minus animi perferendis. Placeat quam nostrum ab ad
+        doloremque dignissimos ratione facere cumque quas odit. Autem maiores
+        ducimus quo?
       </p>
+
+      <ul>
+        {todo.map(todo => (<li key={todo}>todo</li>))}
+      </ul>
     </>
   )
 }
 
-export default App
+function Title ({color, children}) {
+  return <h1 id="title" style={{ color: color }}>{children}</h1>;
+}
+
+export default App;
