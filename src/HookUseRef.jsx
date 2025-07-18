@@ -14,7 +14,7 @@ function App() {
     };
   }, []);
   return (
-    <div>
+    <div className="container my-3 vstack gap-2">
       <Input label="prefix" value={prefix} onChange={setPrefix} />
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Error laudantium
       tempore culpa fugiat? Saepe et natus hic sit? Commodi nemo reprehenderit
