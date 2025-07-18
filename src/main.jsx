@@ -4,9 +4,14 @@ import App from './App.jsx'
 import Form from './form.jsx'
 import FluxDeDonne from './FluxDeDonne.jsx'
 import ListeDeProduit from './ListeDeProduit.jsx'
+import HookUseEffect from './HookUseEffect.jsx'
+import HookUseEffect2 from './HookUseEffect2.jsx'
+import HookUseMemo from './HookUseMemo.jsx'
+import HookUseRef from './HookUseRef.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ListeDeProduit />
+    <HookUseRef />
   </StrictMode>,
 )
