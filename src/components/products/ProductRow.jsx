@@ -7,6 +7,7 @@
 
 export function ProductRow({ product }) {
     const style = product.stocked ? undefined : { color: 'red' };
+    //throw new Error("Erreur de test"); // Simule une erreur pour tester ErrorBoundary
     return (
         <tr>
             <td style={style}>{product.name}</td>
