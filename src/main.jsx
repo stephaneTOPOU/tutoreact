@@ -12,9 +12,10 @@ import HookPersonnalise from './HookPersonnalise.jsx'
 import HookFetch from './HookFetch.jsx'
 import MemorisationAndUseCallback from './MemorisationAndUseCallback.jsx'
 import Portail from './Portail.jsx'
+import HookUseReducer from './HookUseReducer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ListeDeProduit />
+    <HookUseReducer />
   </StrictMode>,
 )
