@@ -13,9 +13,11 @@ import HookFetch from './HookFetch.jsx'
 import MemorisationAndUseCallback from './MemorisationAndUseCallback.jsx'
 import Portail from './Portail.jsx'
 import HookUseReducer from './HookUseReducer.jsx'
+import HookUseSyncExternalStore from './HookUseSyncExternalStore.jsx'
+import ReactRooter from './ReactRooter.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HookUseReducer />
+    <ReactRooter />
   </StrictMode>,
 )
