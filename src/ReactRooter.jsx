@@ -1,6 +1,6 @@
 import {
   createBrowserRouter,
-  defer,
+  //defer,
   NavLink,
   Outlet,
   RouterProvider,
