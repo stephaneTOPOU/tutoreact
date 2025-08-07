@@ -15,10 +15,10 @@ import Portail from './Portail.jsx'
 import HookUseReducer from './HookUseReducer.jsx'
 import HookUseSyncExternalStore from './HookUseSyncExternalStore.jsx'
 import ReactRooter from './ReactRooter.jsx'
-import FramerMotion from './FramerMotion.jsx'
+import FramerMotion3 from './FramerMotion3.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FramerMotion />
+    <FramerMotion3 />
   </StrictMode>,
 )

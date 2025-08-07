@@ -3,24 +3,23 @@ import { useToggle } from "./hooks/useToggle.js";
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
 
-const boxVariants = {
-  visible: { x: 0, rotate: 0 },
-  hidden: { x: 100, rotate: 45 },
-};
 
-const wrapperVariants = {
-  // visible: {opacity: 1, transition: {when: 'beforeChildren'}}, 
-  // hidden: {opacity: 0, transition: {when: 'afterChildren', staggerChildren: .2}}
-}
 function App() {
   const [open, toggle] = useToggle(true);
+  const items = open ? [1, 2, 3, 4, 5] : [3, 2, 5, 1, 4];
 
   return (
     <div className="container my-4 vstack gap-2">
-      <motion.div className="vstack gap-2" animate={open ? 'visible' : 'hidden'} variants={wrapperVariants}>
-        <MotionBox variants={boxVariants} transition={{ duration: .5, type: 'tween' }}>1</MotionBox>
-        <MotionBox variants={boxVariants}>2</MotionBox>
-        <MotionBox variants={boxVariants}>3</MotionBox>
+      <motion.div
+        className="hstack gap-2"
+        animate={open ? "visible" : "hidden"}
+        
+      >
+        {items.map((item) => (
+          <MotionBox layout key={item}>
+            {item}
+          </MotionBox>
+        ))}
       </motion.div>
       <div>
         <Button onClick={toggle}>Afficher / Masquer</Button>
